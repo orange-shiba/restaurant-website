@@ -12,6 +12,10 @@
 
   <style>
 
+    html{
+      scroll-behavior: smooth;
+    }
+
     .mybody{
       margin: 0px;
       font-family: "Open Sans", sans-serif;
@@ -19,17 +23,143 @@
 
     .atf-image{
       width: 100%;
-      height: 100%;
+      height: 500px;
       filter: blur(3px);
+      object-fit: cover;
     }
 
     .pacifico{
       font-family: "Pacifico", cursive;
     }
 
+    .top-menu{
+      position: absolute;
+      top: 32px;
+      right: 100px;
+    }
+
+    .top-menu a{
+      color: white;
+      text-decoration: none;
+      margin-left: 32px;
+      font-weight: 600;
+      filter: drop-shadow(2px 6px 8px rgba(0,0,0,0.5));
+    }
+
+    .top-menu a:hover{
+      color: #EDBB0A;
+    }
+
+    .order-button{
+      background-color: #EDBB0A;
+      padding: 16px;
+      color: black !important;
+    }
+
+    .order-button:hover{
+      background-color: #E8C755;
+    }
+
     .main-container{
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      height: 500px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .headline{
+      color: #EDBB0A;
+      font-size: 54px;
+      filter: drop-shadow(2px 6px 8px rgba(0,0,0,0.5));
+    }
+
+    .container{
       padding-left: 100px;
-      background-color: rgba(0, 0, 0, 0.1);
+      padding-right: 100px;
+      margin-bottom: 64px;
+    }
+
+    table {
+      text-align: left;
+    }
+
+    .footer{
+      background-color: rgb(35, 38, 41);
+      color: white;
+      padding: 50px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+
+    }
+    
+    .googlemaps{
+      height: 350px;
+      width: 100%;
+    }
+
+    .footer-link:link{
+      color: deepskyblue;
+      text-decoration: none;
+    }
+
+    .footer-link:visited{
+      color: rgb(255, 0, 255);
+    }
+
+    .footer-link:hover{
+      color: rgb(255, 0, 0);
+      text-decoration: underline;
+    }
+    
+    .phone{
+      color: rgb(4, 0, 255);
+      text-decoration: none;
+    }
+
+    .phone:visited{
+      color: rgb(140, 0, 255);
+    }
+
+    .phone:hover{
+      color: rgb(255, 0, 0);
+      text-decoration: underline;
+    }
+
+    .mail{
+      color: rgb(4, 0, 255);
+      text-decoration: none;
+    }
+
+    .mail:visited{
+      color: rgb(140, 0, 255);
+    }
+
+    .mail:hover{
+      color: rgb(255, 0, 0);
+      text-decoration: underline;
+    }
+
+    .download{
+      color: rgb(4, 0, 255);
+      text-decoration: none;
+    }
+
+    .download:visited{
+      color: rgb(140, 0, 255);
+    }
+
+    .download:hover{
+      color: rgb(255, 0, 0);
+      text-decoration: underline;
     }
 
   </style>
@@ -39,64 +169,80 @@
   <img class="atf-image" src="img/aot.jpg" alt="">
 
   <div class="main-container">
-    <h1 class="pacifico">Herzlich willkommen</h1>
-    Hier findest du einen Ueberblick ueber unsere Speisen
+    <h1 class="headline">Herzlich willkommen</h1>
+    <p>Hier findest du einen &Uuml;eberblick 	&uuml;ber unsere Speisen!</p>
   </div>
 
-  <h2 class="pacifico">Unsere Oeffnungszeiten</h2>
+  <div class="top-menu">
+    <a href="#contact">RESERVIEREN</a>
+    <a href="https://www.lieferando.de/speisekarte/pizzeria-da-antonio-99817" class="order-button">BESTELL ONLINE</a>
+    <a href="#contact">KONTAKT</a>
+    <a href="#address">ANFAHRT</a>
+  </div>
 
-  <table>
-    <tr>
-        <td>Mo - Fr:</td>
-        <td>12:00 - 23:00</td>
-    </tr>
-    <tr>
-      <td>Sa:</td>
-      <td>11:00 - 24:00</td>
-    </tr>
-    <tr>
-      <td>So:</td>
-      <td>11:00 - 24:00</td>
-    </tr>
-  </table>
+  <div class="container openingHours">
+    <h2 class="pacifico">Unsere &Ouml;effnungszeiten</h2>
 
-  <h2 class="pacifico">Anfahrt</h2>
-  <p>Unsere Adresse lautet: Kasseler Str. 92, 99817 Eisenach</p>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.749626572017!2d10.297600077226969!3d50.98381834881684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41718573e4610753%3A0x93667ec3a0d242f5!2sPizzeria%20Da%20Antonio!5e0!3m2!1sde!2sde!4v1727690845671!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <table>
+      <tr>
+          <td>Mo - Fr:</td>
+          <td>12:00 - 23:00</td>
+      </tr>
+      <tr>
+        <td>Sa:</td>
+        <td>11:00 - 24:00</td>
+      </tr>
+      <tr>
+        <td>So:</td>
+        <td>11:00 - 24:00</td>
+      </tr>
+    </table>
+  </div>
 
-  <h1 class="pacifico">Speisekarte</h1>
-  <table>
-    <tr>
-      <td>1.</td>
-      <td>Pizza Salami:</td>
-      <td>10.50$</td>
-    </tr>
-    <tr>
-      <td>2.</td>
-      <td>Pizza Schinken:</td>
-      <td>10.50$</td>
-    </tr>
-    <tr>
-      <td>3.</td>
-      <td>Pizza Margherita:</td>
-      <td>9.50$</td>
-    </tr>
-    <tr>
-      <td>4.</td>
-      <td>Tiramisu:</td>
-      <td>6.50$</td>
-    </tr>
-  </table>
-Jetzt die Tageskarte <a href="downloads/tageskarte.pdf">herunterladen</a>
+  <div class="container address" id="address">
+    <h2 class="pacifico">Anfahrt</h2>
+    <p>Unsere Adresse lautet: Kasseler Str. 92, 99817 Eisenach</p>
+    <iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2511.749626572017!2d10.297600077226969!3d50.98381834881684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41718573e4610753%3A0x93667ec3a0d242f5!2sPizzeria%20Da%20Antonio!5e0!3m2!1sde!2sde!4v1727690845671!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 
-  <h2 class="pacifico">Kontakt</h2>
-  So kannst du uns kontaktieren <br>
-  Telefon: <a href="tel:94573843710">94573843710</a> <br>
-  E-Mail: <a href="mailto:mein@restaurant.de">mein@restaurant.de</a>
+  <div class="container menu">
+    <h1 class="pacifico">Speisekarte</h1>
+    <table>
+      <tr>
+        <td>1.</td>
+        <td>Pizza Salami:</td>
+        <td>10.50$</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Pizza Schinken:</td>
+        <td>10.50$</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Pizza Hawaii:</td>
+        <td>9.50$</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>Tiramisu:</td>
+        <td>6.50$</td>
+      </tr>
+    </table>
+    Jetzt die Tageskarte <a href="downloads/tageskarte.pdf" class="download">herunterladen</a>
+  </div>
 
+  <div class="container contact" id="contact">
+    <h2 class="pacifico">Kontakt</h2>
+    So kannst du uns kontaktieren <br>
+    Telefon: <a href="tel:94573843710" class="phone">94573843710</a> <br>
+    E-Mail: <a href="mailto:mein@restaurant.de" class="mail">mein@restaurant.de</a>
+  </div>
   <br>
   <br>
-    (c) Copyright 2024 Pizza Restaurant
-    <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+  <div class="container footer">
+    <div>&copy; 2024 Pizza Restaurant</div>
+    <div><a href="impressum.html" class="footer-link">Impressum</a> | <a href="datenschutz.html" class="footer-link">Datenschutz</a></div>
+  </div>
 </body>
 </html>
